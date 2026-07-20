@@ -1,0 +1,29 @@
+platforms:
+  qqbot:
+    enabled: true
+    extra:
+      # Credentials remain in .env:
+      # QQ_APP_ID=your-app-id
+      # QQ_CLIENT_SECRET=your-client-secret
+      dm_policy: allowlist
+      allow_from: YOUR_OWNER_USER_OPENID
+      group_policy: allowlist
+      group_allow_from: YOUR_GROUP_OPENID
+      group_owner_openids: YOUR_OWNER_MEMBER_OPENID
+      full_group_messages_mode: dispatch
+      markdown_support: true
+      nickname_lookup:
+        enabled: false
+
+display:
+  busy_input_mode: queue
+
+platform_toolsets:
+  qqbot:
+    - qqbot_messaging
+    - clarify
+    - file
+    - memory
+    - session_search
+    - skills
+    - todo
